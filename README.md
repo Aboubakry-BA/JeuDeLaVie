@@ -11,23 +11,6 @@ Le projet est conçu en suivant les principes SOLID pour assurer une conception 
 - **controllers/game_logic.py**: Logique principale du jeu, respectant les principes d'ouverture/fermeture (O - Open/Closed Principle) et d'inversion de dépendance (D - Dependency Inversion Principle).
 - **views/game_ui.py**: Interface utilisateur graphique (GUI) avec Tkinter, suivant le principe d'inversion de dépendance en utilisant des dépendances abstraites.
 
-## Principes SOLID Respectés
-
-### 1. Principe de Responsabilité Unique (S - Single Responsibility Principle)
-Chaque classe a une responsabilité unique. Par exemple, la classe `Cell` gère l'état individuel des cellules.
-
-### 2. Principe d'Ouverture/Fermeture (O - Open/Closed Principle)
-Le module `game_logic.py` est conçu pour être ouvert à l'extension (ajouter de nouvelles fonctionnalités) tout en étant fermé à la modification (l'implémentation existante n'est pas modifiée).
-
-### 3. Principe de Substitution de Liskov (L - Liskov Substitution Principle)
-Les classes dérivées (par exemple, `Cell` dans `cellule.py`) peuvent être utilisées de manière interchangeable avec leurs classes de base.
-
-### 4. Principe d'Interface Ségrégée (I - Interface Segregation Principle)
-Les interfaces sont spécifiques aux besoins des classes clientes, évitant ainsi une interface trop large.
-
-### 5. Principe d'Inversion de Dépendance (D - Dependency Inversion Principle)
-Les dépendances sont inversées, favorisant l'utilisation de dépendances abstraites. Par exemple, la logique du jeu dépend d'interfaces plutôt que d'implémentations concrètes.
-
 ## Fonctionnalités
 
 - Création d'une grille de jeu avec des cellules vivantes et mortes.
@@ -53,6 +36,23 @@ Les dépendances sont inversées, favorisant l'utilisation de dépendances abstr
 - Le bouton "Pause" met en pause l'évolution.
 - Le bouton "Arrêter" stoppe complètement le jeu.
 - Les boutons "Règles" et "Guide" affichent des popups informatifs.
+
+## Principes SOLID Respectés
+
+### 1. Principe de Responsabilité Unique (S - Single Responsibility Principle)
+Chaque classe a une responsabilité unique. Par exemple, la classe `Cell` gère l'état individuel des cellules.
+
+### 2. Principe d'Ouverture/Fermeture (O - Open/Closed Principle)
+Le module `game_logic.py` est conçu pour être ouvert à l'extension (ajouter de nouvelles fonctionnalités) tout en étant fermé à la modification (l'implémentation existante n'est pas modifiée).
+
+### 3. Principe de Substitution de Liskov (L - Liskov Substitution Principle)
+Les classes dérivées (par exemple, `Cell` dans `cellule.py`) peuvent être utilisées de manière interchangeable avec leurs classes de base.
+
+### 4. Principe d'Interface Ségrégée (I - Interface Segregation Principle)
+Les interfaces sont spécifiques aux besoins des classes clientes, évitant ainsi une interface trop large.
+
+### 5. Principe d'Inversion de Dépendance (D - Dependency Inversion Principle)
+Les dépendances sont inversées, favorisant l'utilisation de dépendances abstraites. Par exemple, la logique du jeu dépend d'interfaces plutôt que d'implémentations concrètes.
 
 ## Auteur
 
